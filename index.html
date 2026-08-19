@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handige Hulpers</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef7e9;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            text-align: center;
+            padding: 25px 15px;
+            border-bottom: 3px solid #79b84a;
+        }
+
+        .logo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #79b84a;
+        }
+
+        h1 {
+            margin: 15px 0 5px;
+            font-size: 38px;
+            color: #4b8f29;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .account {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .account a {
+            text-decoration: none;
+            background: #4b8f29;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .account a:hover {
+            background: #39701f;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .welcome h2 {
+            color: #4b8f29;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .button {
+            display: block;
+            text-decoration: none;
+            background: white;
+            color: #222;
+            padding: 30px 20px;
+            border-radius: 18px;
+            border: 3px solid #79b84a;
+            font-size: 22px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.03);
+            background: #f5fff0;
+        }
+
+        .button span {
+            display: block;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .workarea {
+            margin-top: 35px;
+            background: #dff0d4;
+            padding: 20px;
+            border-radius: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            .buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .account {
+                position: static;
+                margin-bottom: 15px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="account">
+        <a href="login.html">👤 Inloggen</a>
+        <a href="account.html">📝 Account maken</a>
+    </div>
+
+    <!-- Zet jullie profielfoto in dezelfde GitHub-map als index.html
+         en noem het bestand: profiel.png -->
+    <img src="profiel.png" alt="Profielfoto Handige Hulpers" class="logo">
+
+    <h1>HANDIGE HULPERS</h1>
+    <p class="subtitle">
+        Kleine klusjes, grote hulp! 🌱
+    </p>
+
+</header>
+
+<main>
+
+    <section class="welcome">
+        <h2>Welkom bij Handige Hulpers!</h2>
+
+        <p>
+            Wij helpen met kleine klusjes zoals dieren uitlaten,
+            gras maaien, onkruid wieden en auto's wassen.
+        </p>
+
+        <p>
+            Wij werken voornamelijk in <strong>Dordrecht</strong>.
+            Zwijndrecht is soms mogelijk, afhankelijk van de bereikbaarheid.
+        </p>
+    </section>
+
+    <section class="buttons">
+
+        <a href="contact.html" class="button">
+            <span>📞</span>
+            Contact
+            <small>Voor verdere vragen</small>
+        </a>
+
+        <a href="over-ons.html" class="button">
+            <span>👋</span>
+            Wie zijn we?
+            <small>Leer ons beter kennen</small>
+        </a>
+
+        <a href="afspraak.html" class="button">
+            <span>📅</span>
+            Afspraak maken
+            <small>Plan een klus met ons</small>
+        </a>
+
+        <a href="feedback.html" class="button">
+            <span>💬</span>
+            Problemen / Feedback
+            <small>Vertel ons wat je vindt</small>
+        </a>
+
+    </section>
+
+    <section class="workarea">
+        <h2>📍 Ons werkgebied</h2>
+        <p>
+            Wij werken voornamelijk in <strong>Dordrecht</strong>.
+        </p>
+        <p>
+            Soms kunnen we ook naar <strong>Zwijndrecht</strong>,
+            bijvoorbeeld als de bereikbaarheid goed is.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Handige Hulpers</p>
+    <p>Owen & Kyano</p>
+</footer>
+
+</body>
+</html>
