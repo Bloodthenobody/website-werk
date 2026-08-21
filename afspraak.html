@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Afspraak maken - Handige Hulpers</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef7e9;
+            color: #222;
+        }
+
+        header {
+            background: white;
+            text-align: center;
+            padding: 25px 15px;
+            border-bottom: 3px solid #79b84a;
+        }
+
+        .logo {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #79b84a;
+        }
+
+        h1 {
+            margin: 15px 0 5px;
+            color: #4b8f29;
+            font-size: 36px;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .form-box h2 {
+            color: #4b8f29;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .info {
+            background: #dff0d4;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 7px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 2px solid #b9d9a7;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            background: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4b8f29;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .required {
+            color: #c0392b;
+        }
+
+        .submit-button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #4b8f29;
+            color: white;
+            font-size: 19px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #39701f;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #4b8f29;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            margin-top: 30px;
+        }
+
+        .small-text {
+            font-size: 14px;
+            color: #555;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .form-box {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <!-- Gebruik dezelfde profielfoto als op index.html -->
+    <img src="profiel.png"
+         alt="Profielfoto Handige Hulpers"
+         class="logo">
+
+    <h1>HANDIGE HULPERS</h1>
+
+    <p class="subtitle">
+        Een afspraak maken 📅
+    </p>
+
+</header>
+
+<main>
+
+    <section class="form-box">
+
+        <h2>📅 Afspraak aanvragen</h2>
+
+        <div class="info">
+            <strong>Let op:</strong><br>
+            Met dit formulier vraag je een afspraak aan.
+            De afspraak is pas definitief nadat wij de aanvraag hebben bekeken en geaccepteerd.
+            <br><br>
+            📍 Wij werken voornamelijk in <strong>Dordrecht</strong>.
+            Zwijndrecht is soms mogelijk afhankelijk van de bereikbaarheid.
+        </div>
+
+        <form action="#" method="post">
+
+            <label for="naam">
+                Naam <span class="required">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="naam"
+                name="naam"
+                placeholder="Vul je naam in"
+                required
+                autocomplete="name"
+            >
+
+
+            <label for="telefoon">
+                Telefoonnummer <span class="required">*</span>
+            </label>
+
+            <input
+                type="tel"
+                id="telefoon"
+                name="telefoon"
+                placeholder="Bijvoorbeeld 06 12345678"
+                required
+                autocomplete="tel"
+            >
+
+
+            <label for="email">
+                E-mailadres <span class="required">*</span>
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Bijvoorbeeld naam@email.nl"
+                required
+                autocomplete="email"
+            >
+
+
+            <label for="klus">
+                Welke klus wil je laten doen? <span class="required">*</span>
+            </label>
+
+            <select id="klus" name="klus" required>
+
+                <option value="">
+                    Kies een klus
+                </option>
+
+                <option value="dieren-uitlaten">
+                    🐶 Dieren uitlaten
+                </option>
+
+                <option value="gras-maaien">
+                    🌱 Gras maaien
+                </option>
+
+                <option value="onkruid-wieden">
+                    🌿 Onkruid wieden
+                </option>
+
+                <option value="auto-wassen">
+                    🚗 Auto wassen
+                </option>
+
+                <option value="schoonmaken">
+                    🧹 Binnen schoonmaken
+                </option>
+
+                <option value="anders">
+                    🛠️ Anders
+                </option>
+
+            </select>
+
+
+            <label for="datum">
+                Gewenste datum <span class="required">*</span>
+            </label>
+
+            <input
+                type="date"
+                id="datum"
+                name="datum"
+                required
+            >
+
+
+            <label for="tijd">
+                Gewenste tijd <span class="required">*</span>
+            </label>
+
+            <input
+                type="time"
+                id="tijd"
+                name="tijd"
+                required
+            >
+
+
+            <label for="adres">
+                Straat + huisnummer <span class="required">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="adres"
+                name="adres"
+                placeholder="Bijvoorbeeld Merwedestraat 10"
+                required
+                autocomplete="street-address"
+            >
+
+
+            <label for="extra">
+                Extra uitleg
+            </label>
+
+            <textarea
+                id="extra"
+                name="extra"
+                placeholder="Vertel eventueel meer over de klus..."
+            ></textarea>
+
+
+            <button type="submit" class="submit-button">
+                📅 Afspraak aanvragen
+            </button>
+
+        </form>
+
+        <p class="small-text">
+            * Verplichte velden.
+            Je aanvraag is nog geen definitieve afspraak.
+            Wij bekijken eerst de aanvraag.
+        </p>
+
+        <a href="index.html" class="back">
+            ← Terug naar de homepagina
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>© 2026 Handige Hulpers</p>
+    <p>Owen & Kyano</p>
+
+</footer>
+
+</body>
+</html>
